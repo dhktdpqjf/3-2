@@ -1,0 +1,51 @@
+DicePlayer는 Player를 상속받아, Player에 있는 getName()을 쓸 수 있게 되었고,
+ Player에서는 기존에 없던 setNum()이라는 함수를 써서, DicePlayer안에 있는 roll()함수에서
+ 멤버 변수 Dice를 활용하고 Dice의 roll함수를 쓴 후, 상속받은 Player에 있는 setNum함수에 값을 넣어서
+ 나중에 DicePlayer로 생성된 p1,p2가 상위클래스인 Player의 getNum을 가져올 수 있도록 하였습니다.
+ 기존에 Player에서 했던 play()함수를 쓰는 대신, DicePlayer가 roll()함수를 쓰도록 만들었습니다.
+
+
+Report클래스
+ DiceGameReport파일을 읽는 getReport()함수와, 저장돼있던 값과 비교하여 새로운 값을 저장하는 setReport()함수를 만들었습니다.
+
+
+History 클래스에서는 Report에서 상속을 받아, getReport()함수를 쓰고, Report의 멤버변수들도 쓸 수 있도록 했습니다.
+
+
+DiceGame 클래스
+ startGame()함수에서는 프레임 창을 만들어 주는 역할을 하고 playGame()에서는 play버튼을 눌렀을 때 게임이 실행되도록 합니다.
+
+ DicePlayer 두 명을 할당해 주고, 입력받은 이름은 대문자로 변환시킵니다.
+ 자동으로 10번의 게임 후 이긴 횟수와, 이긴 게임의 점수를 계속 더한 값을 비교해서 더 많이 이긴 사람의 점수를 레이블에 출력하고,
+ 이긴 사람의 이름과 이겼다는 문구를 나타내게 됩니다. 그리고 Report클래스의 setReport함수를 호출해서 이전 우승자와 비교하여
+ 점수가 높으면 기록을 바꿉니다. 점수가 같다면 이긴 횟수를 비교하여 더 많이 이긴 쪽을 기록합니다.
+
+
+<추가기능>
+
+History 버튼을 누르면 그 전 우승자의 이긴 횟수, 이름, 점수를 출력할 수 있도록 했습니다.
+만약 게임을 계속 해서 우승자가 바뀐다면 history가 업데이트되었다는 알림이 뜹니다.
+history버튼을 다시 눌러보면 기록된 사람이 바뀐 것을 알 수 있습니다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
